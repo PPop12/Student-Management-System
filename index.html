@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div><p class="eyebrow">COLLEGE ACADEMICS</p><h1>Student Management System</h1><p class="sub">Manage student records, search quickly and view academic performance.</p></div></header>
+  <main>
+    <section class="stats">
+      <article><span>Total students</span><strong id="total">0</strong></article>
+      <article><span>Average CGPA</span><strong id="average">0.00</strong></article>
+      <article><span>Average attendance</span><strong id="attendance">0%</strong></article>
+    </section>
+    <section class="panel">
+      <div class="section-title"><div><p class="eyebrow">RECORDS</p><h2>Student directory</h2></div>
+        <div class="controls"><input id="search" placeholder="Search name or roll no."><select id="sort"><option value="">Sort records</option><option value="cgpa">Highest CGPA</option><option value="name">Name (A-Z)</option><option value="attendance">Highest attendance</option></select></div>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Roll no.</th><th>Name</th><th>Department</th><th>CGPA</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <p id="empty" class="empty" hidden>No student records found.</p>
+    </section>
+    <section class="panel add-panel">
+      <div><p class="eyebrow">NEW ENTRY</p><h2>Add a student</h2><p class="sub dark">Enter the details below to add a record to the linked list and save it to the CSV file.</p></div>
+      <form id="addForm">
+        <label>Roll number<input name="roll" required placeholder="e.g. 1021"></label>
+        <label>Student name<input name="name" required placeholder="Full name"></label>
+        <label>Department<input name="department" required placeholder="e.g. CSE"></label>
+        <label>CGPA (0-10)<input name="cgpa" type="number" min="0" max="10" step="0.01" required></label>
+        <label>Attendance (0-100)<input name="attendance" type="number" min="0" max="100" required></label>
+        <button type="submit">Add student</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+  </main>
+  <footer>Academic prototype · C++ · Linked List · CSV File Handling</footer>
+  <script src="app.js"></script>
+</body></html>

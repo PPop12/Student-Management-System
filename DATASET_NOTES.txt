@@ -1,0 +1,17 @@
+DATASET NOTES
+
+File: students.csv
+Records: 15 sample records
+Fields:
+- roll: unique student roll number
+- name: student name
+- department: academic department
+- cgpa: CGPA on a 0-10 scale
+- attendance: attendance percentage (0-100)
+
+Dataset type: Synthetic / demonstration data.
+The records were created for this academic prototype and do not represent actual
+students or an externally collected institutional dataset.
+
+For a formal submission, clearly state that the dataset is synthetic unless your
+team replaces it with a permitted real dataset and records its source.
